@@ -6,7 +6,7 @@ Problem: HIV sequences are often plagued with sequence defects and/or sequencing
 
 Aim: develop a tool to screen for HIV-1 LTR sequences, including U3 region, R region, U5 region at the 5' and 3' ends. 
 
-Background: HIV DNA has LTR-HIV-LTR structure, mosre specifically U3-R-U5-HIV-U3-R-U5. 5' U3-R-U5 should be identical to 3' U3-R-U5. HIV sequences with different sequences denote possible sequencing artifacts or synthetic constructs. E.g., NL4-3 made from two HIV-1 cDNAs spliced together during molecular cloning, as opposed to during an infective cycle. Note, the current historical HIV reference genome GenBank:K03455.1 has sequencing artifacts in its U3 and U5:
+Background: HIV DNA has LTR-HIV-LTR structure, more specifically U3-R-U5-HIV-U3-R-U5. 5' U3-R-U5 should be identical to 3' U3-R-U5. HIV sequences with different sequences denote possible sequencing artifacts or synthetic constructs. E.g., NL4-3 made from two HIV-1 cDNAs spliced together during molecular cloning, as opposed to during an infective cycle. Note, the current historical HIV reference genome GenBank:K03455.1 has sequencing artifacts in its U3 and U5:
 
 ```
 CLUSTAL format alignment by MAFFT (v7.511)
@@ -69,7 +69,7 @@ HXB2_3'_LTR_U5_region     gtcagtgtggaaaatctctagca
 HXB2_5'_LTR_U5_region     gtcagtgtggaaaatctctagca
                           ***********************
 ```
-These sequencing artifacts do not align with the reported identity of HXB2, which was believed to be a captured host-integrated HIV-1 provirus from early in the prepandemic HIV-1 epidemic era. Based on the current model of retroviral replication, LTRs homogenize after RT and prior to integration. More recent resequencing of a legacy HXB2 molecular clone pHXB2 D (pHXB2_D as Genbank:[MW079479.1](https://www.ncbi.nlm.nih.gov/nuccore/MW079479)) enabled correction of this incongruity. Because it was made with high-depth long-read sequencing, it is the most accurate representation of HXB2. As such, landmarks were used for the development of UTR_Checker "utr-checker.py".
+These sequencing artifacts do not align with the reported identity of HXB2, which was believed to be a captured host-integrated HIV-1 provirus from early in the prepandemic HIV-1 epidemic era. Based on the current model of retroviral replication, LTRs homogenize after RT and prior to integration. More recent resequencing of a legacy HXB2 molecular clone pHXB2 D (pHXB2_D as Genbank:[MW079479.1](https://www.ncbi.nlm.nih.gov/nuccore/MW079479)) enabled correction of this incongruity. Because it was made with high-depth long-read sequencing, it is the most accurate representation of HXB2. As such, landmarks were used for the development of UTR_Checker "utr-checker.py". This tool aims to determine how much of U3, R, U5 are present at 3 and 5' ends of user-provided HIV-1 sequence. Based on this, the tool may then classify input as HIV DNA, RNA, or partial/incomplete.
 
 ```
 CLUSTAL format alignment by MAFFT (v7.511)
