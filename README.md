@@ -7,6 +7,7 @@ Aim: develop a tool to screen for HIV-1 LTR sequences, including U3 region, R re
 
 Background: HIV DNA has LTR-HIV-LTR structure, mosre specifically U3-R-U5-HIV-U3-R-U5. 5' U3-R-U5 should be identical to 3' U3-R-U5. HIV sequences with different sequences denote possible sequencing artifacts or synthetic constructs. E.g., NL4-3 made from two HIV-1 cDNAs spliced together during molecular cloning, as opposed to during an infective cycle. Note, the current historical HIV reference genome GenBank:K03455.1 has sequencing artifacts in its U3, R, and U5:
 
+```
 CLUSTAL format alignment by MAFFT (v7.511)
 
 
@@ -41,3 +42,5 @@ HXB2_3'_LTR_U3_region     ctggggactttccagggaggcgtggcctgggcgggactggggagtggcgagccc
 HXB2_5'_LTR_U3_region     cctgcatataagcagctgctttttgcctgtactgg
 HXB2_3'_LTR_U3_region     cctgcatataagcagctgctttttgcctgtactgg
                           ***********************************
+```
+
