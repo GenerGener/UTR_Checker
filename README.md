@@ -43,4 +43,12 @@ HXB2_5'_LTR_U3_region     cctgcatataagcagctgctttttgcctgtactgg
 HXB2_3'_LTR_U3_region     cctgcatataagcagctgctttttgcctgtactgg
                           ***********************************
 ```
+(Pairwise alignment done with MAFFT online server. Method FFT-NS-i (Standard). Command: mafft --reorder --auto input.)
 
+References:
+   Katoh et al. (2002) describes FFT-NS-1, FFT-NS-2 and FFT-NS-i.
+   
+   Kuraku et al. (2013) outlines this web service.
+   
+MAFFT home:
+   https://mafft.cbrc.jp/alignment/software/
