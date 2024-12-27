@@ -116,10 +116,10 @@ MW079479.1:1-634          agacccttttagtcagtgtggaaaatctctagca
 MW079479.1:9086-9719      agacccttttagtcagtgtggaaaatctctagca
                           **********************************
 ```
-[MW079479.1](https://www.ncbi.nlm.nih.gov/nuccore/MW079479) is first described in version 1 of Gener, 2019[^1].
+HXB2 LTR heterogeneity discovered after pHXB2-D resequencing was first described in version 1 of Gener, 2019[^1].
 [^1]: Alejandro R. Gener. "Full-coverage sequencing of HIV-1 provirus from a reference plasmid" bioRxiv 611848; doi: https://doi.org/10.1101/611848.
 
-The most current work is Gener et al. 2021[^2].
+HXB2 as pHXB2_D plasmid assembly and data release as [MW079479.1](https://www.ncbi.nlm.nih.gov/nuccore/MW079479) was described in the most current work: Gener et al. 2021[^2].
 
 [^2]: Alejandro R. Gener, Wei Zou, Brian T. Foley, Deborah P. Hyink, Paul E. Klotman. "Reference plasmid pHXB2_D is an HIV-1 molecular clone that exhibits identical LTRs and a single integration site indicative of an HIV provirus" bioRxiv 611848; doi: https://doi.org/10.1101/611848.
 
