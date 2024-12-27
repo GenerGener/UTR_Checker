@@ -103,21 +103,23 @@ MW079479.1:1-634          ctggggactttccagggaggcgtggcctgggcgggactggggagtggcgagccc
 MW079479.1:9086-9719      ctggggactttccagggaggcgtggcctgggcgggactggggagtggcgagccctcagat
                           ************************************************************
 
-MW079479.1:1-634          cctgcatataagcagctgctttttgcctgtactgggtctctctggttagaccagatctga
-MW079479.1:9086-9719      cctgcatataagcagctgctttttgcctgtactgggtctctctggttagaccagatctga
-                          ************************************************************
+MW079479.1:1-634          cctgcatataagcagctgctttttgcctgtactgg[gtctctctggttagaccagatctga
+MW079479.1:9086-9719      cctgcatataagcagctgctttttgcctgtactgg[gtctctctggttagaccagatctga
+                          ***********************************[*************************
 
 MW079479.1:1-634          gcctgggagctctctggctaactagggaacccactgcttaagcctcaataaagcttgcct
 MW079479.1:9086-9719      gcctgggagctctctggctaactagggaacccactgcttaagcctcaataaagcttgcct
                           ************************************************************
 
-MW079479.1:1-634          tgagtgcttcaagtagtgtgtgcccgtctgttgtgtgactctggtaactagagatccctc
-MW079479.1:9086-9719      tgagtgcttcaagtagtgtgtgcccgtctgttgtgtgactctggtaactagagatccctc
-                          ************************************************************
+MW079479.1:1-634          tgagtgcttca]agtagtgtgtgcccgtctgttgtgtgactctggtaactagagatccctc
+MW079479.1:9086-9719      tgagtgcttca]agtagtgtgtgcccgtctgttgtgtgactctggtaactagagatccctc
+                          ***********]*************************************************
 
 MW079479.1:1-634          agacccttttagtcagtgtggaaaatctctagca
 MW079479.1:9086-9719      agacccttttagtcagtgtggaaaatctctagca
                           **********************************
+
+[R]
 ```
 HXB2 LTR heterogeneity discovered after pHXB2-D resequencing was first described in version 1 of Gener, 2019[^1].
 [^1]: Alejandro R. Gener. "Full-coverage sequencing of HIV-1 provirus from a reference plasmid" bioRxiv 611848; doi: https://doi.org/10.1101/611848.
