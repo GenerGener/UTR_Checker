@@ -116,12 +116,12 @@ MW079479.1:1-634          agacccttttagtcagtgtggaaaatctctagca
 MW079479.1:9086-9719      agacccttttagtcagtgtggaaaatctctagca
                           **********************************
 ```
-[MW079479.1](https://www.ncbi.nlm.nih.gov/nuccore/MW079479) is first described in version 1 of Gener, 2019.
-Alejandro R. Gener. "Full-coverage sequencing of HIV-1 provirus from a reference plasmid" bioRxiv 611848; doi: https://doi.org/10.1101/611848.
+[MW079479.1](https://www.ncbi.nlm.nih.gov/nuccore/MW079479) is first described in version 1 of Gener, 2019[^1].
+[^1]: Alejandro R. Gener. "Full-coverage sequencing of HIV-1 provirus from a reference plasmid" bioRxiv 611848; doi: https://doi.org/10.1101/611848.
 
-The most current work is Gener et al. 2021.
+The most current work is Gener et al. 2021[^2].
 
-Alejandro R. Gener, Wei Zou, Brian T. Foley, Deborah P. Hyink, Paul E. Klotman. "Reference plasmid pHXB2_D is an HIV-1 molecular clone that exhibits identical LTRs and a single integration site indicative of an HIV provirus" bioRxiv 611848; doi: https://doi.org/10.1101/611848.
+[^2]: Alejandro R. Gener, Wei Zou, Brian T. Foley, Deborah P. Hyink, Paul E. Klotman. "Reference plasmid pHXB2_D is an HIV-1 molecular clone that exhibits identical LTRs and a single integration site indicative of an HIV provirus" bioRxiv 611848; doi: https://doi.org/10.1101/611848.
 
 (Pairwise alignment done with MAFFT online server. Method FFT-NS-i (Standard). Command: mafft --reorder --auto input.)
 
