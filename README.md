@@ -304,7 +304,7 @@ The script classifies sequences into:
 3. Format Requirements
    - Input can be any file containing FASTA-formatted sequences
    - Common extensions (.fasta, .fsa, .fa, .txt) all supported
-   - Can process multiple sequences in a single file
-   - Handles both DNA and RNA sequences
+   - Can process multiple sequences in a single file (multifasta untested)
+   - Handles both DNA and RNA sequences, but currently script assumes ACGT base encoding (untested with ACGU).
 
 
