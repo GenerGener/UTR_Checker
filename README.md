@@ -137,3 +137,174 @@ References:
    
 MAFFT home:
    https://mafft.cbrc.jp/alignment/software/
+
+# UTR-Checker Tutorial
+
+## Overview
+UTR-Checker is a Python script designed to analyze HIV sequences for the presence and arrangement of U3, R, and U5 regions. It uses minimap2 for initial candidate identification followed by detailed alignment analysis, making it efficient for both short and long sequences.
+
+## Dependencies
+
+### Required Python Packages
+```bash
+pip install biopython mappy
+```
+
+The script requires:
+- Python 3.6 or higher
+- Biopython (for sequence handling and alignment)
+- mappy (Python bindings for minimap2)
+- Built-in libraries: tempfile, os, logging, typing, argparse
+
+## Installation
+
+1. Save the script as `utr-checker.py`
+2. Ensure your input sequences are in FASTA format
+3. Make the script executable (Unix/Linux):
+   ```bash
+   chmod +x utr-checker.py
+   ```
+
+## Usage
+
+### Basic Usage
+```bash
+python utr-checker.py input.fasta
+```
+
+The script accepts any file containing FASTA-formatted sequences, regardless of extension (.fasta, .fsa, .fa, .txt).
+
+### Advanced Options
+```bash
+python utr-checker.py --minimap-threshold 0.55 --final-threshold 0.65 --gap-open -2 --gap-extend -0.5 --debug input.fasta
+```
+
+Parameters:
+- `--minimap-threshold`: Initial screening threshold (default: 0.60)
+- `--final-threshold`: Final similarity threshold (default: 0.70)
+- `--gap-open`: Gap opening penalty (default: -2)
+- `--gap-extend`: Gap extension penalty (default: -0.5)
+- `--debug`: Enable debug output
+- `--format`: Input file format (default: fasta)
+
+## Example Analysis
+
+Using sample test files:
+
+### Example 1: HIV-1 mRNA (MZ242719.1)
+```bash
+user@computer:~$ python utr-checker.py MZ242719.fasta --minimap-threshold 0.55 --final-threshold 0.65
+
+Analyzing sequence: MZ242719.1
+Best match found on forward strand
+Classification: Likely viral RNA
+Overall confidence: 99.45%
+
+Details:
+- Multiple R regions detected (5' and 3' ends)
+- U5 region present near 5' end
+- U3 region present near 3' end
+- U3 occurrences:
+-   1. 98.35% similarity at position 8622-9077
+- R occurrences:
+-   1. 100.00% similarity at position 9077-9173
+-   2. 97.92% similarity at position 2-95
+- U5 occurrences:
+-   1. 100.00% similarity at position 98-181
+```
+
+### Example 2: HIV-1 DNA (HXB2)
+```bash
+user@computer:~$ python utr-checker.py HIV-1_HXB2.fasta --minimap-threshold 0.55 --final-threshold 0.65
+
+Analyzing sequence: K03455.1
+Best match found on forward strand
+Classification: Incomplete/Unclear
+Overall confidence: 99.78%
+
+Details:
+- Partial or unclear LTR pattern
+- U3 occurrences:
+-   1. 99.34% similarity at position 9085-9540
+-   2. 97.03% similarity at position 0-455
+- R occurrences:
+-   1. 100.00% similarity at position 455-551
+-   2. 100.00% similarity at position 9540-9636
+- U5 occurrences:
+-   1. 100.00% similarity at position 551-634
+-   2. 100.00% similarity at position 9636-9719
+```
+
+## Sequence Classification
+
+The script classifies sequences into:
+
+1. "Likely viral RNA"
+   - R regions at both ends
+   - U5 near 5' end
+   - U3 near 3' end
+   - Expected pattern: R-U5-genome-U3-R
+
+2. "Likely genomic DNA"
+   - Complete U3-R-U5 pattern
+   - Found in correct order
+   - May be present at both ends
+
+3. "Incomplete/Unclear"
+   - Regions present but in unexpected arrangement
+   - Missing expected regions
+   - Ambiguous pattern
+
+## Performance Considerations
+
+1. Two-Step Analysis
+   - Initial fast screening using minimap2
+   - Detailed alignment for candidate regions
+   - Adjustable thresholds for both steps
+
+2. Speed vs Accuracy
+   - Lower thresholds increase sensitivity but may add false positives
+   - Higher thresholds increase specificity but might miss divergent sequences
+   - Default values optimized for HIV-1 group M
+
+3. Memory Usage
+   - Efficient with long sequences due to minimap2
+   - Memory scales with sequence length
+   - Temporary files used for minimap2 analysis
+
+## Best Practices
+
+1. Threshold Selection
+   - Start with default thresholds
+   - Lower minimap-threshold for divergent sequences
+   - Adjust final-threshold based on expected similarity
+
+2. Result Interpretation
+   - Check both similarity scores and positions
+   - Verify region order matches expected pattern
+   - Consider biological context (RNA vs DNA)
+
+3. Troubleshooting
+   - Use --debug flag for detailed output
+   - Check for sequence quality issues
+   - Verify FASTA format is correct
+
+## Limitations
+
+1. Reference Sequences
+   - Based on HIV-1 HXB2 references
+   - May have reduced sensitivity for highly divergent strains
+   - Best suited for HIV-1 group M subtype B analysis
+
+2. Structure Detection
+   - Analyzes full sequence for all elements (U3, R, U5)
+   - Detects both terminal and internal matches
+   - Uses position information for pattern classification (e.g., R-U5-genome-U3-R for RNA)
+
+3. Format Requirements
+   - Input can be any file containing FASTA-formatted sequences
+   - Common extensions (.fasta, .fsa, .fa, .txt) all supported
+   - Can process multiple sequences in a single file
+   - Handles both DNA and RNA sequences
+
+
