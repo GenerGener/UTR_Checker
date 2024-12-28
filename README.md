@@ -141,7 +141,7 @@ MAFFT home:
 # UTR-Checker Tutorial
 
 ## Overview
-UTR-Checker is a Python script designed to analyze HIV sequences for the presence and arrangement of U3, R, and U5 regions. It uses minimap2 for initial candidate identification followed by detailed alignment analysis, making it efficient for both short and long sequences.
+UTR-Checker is a Python script designed to analyze HIV sequences for the presence and arrangement of U3, R, and U5 regions. It uses minimap2 for initial candidate identification followed by detailed alignment analysis, making it efficient for both short and long sequences. Version 13 "utr-checker-13.py" works as expected on HXB2 DNA (K03455) as ACGT and NL4-3 mRNA as ACGT MZ242719.
 
 ## Dependencies
 
